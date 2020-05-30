@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="All Test Suite" duration-ms="15217" started-at="2020-05-28T07:35:33Z" finished-at="2020-05-28T07:35:48Z">
+    <groups>
+      <group name="cucumber">
+        <method signature="TestRunner.scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.ui.runner.TestRunner@6e06451e]" name="scenario" class="com.example.ui.runner.TestRunner"/>
+      </group> <!-- cucumber -->
+    </groups>
+    <test name="/Users/shukrani.bille/eclipse-workspace/CucumberTest" duration-ms="15217" started-at="2020-05-28T07:35:33Z" finished-at="2020-05-28T07:35:48Z">
+      <class name="com.example.ui.runner.TestRunner">
+        <test-method status="PASS" signature="setupEnvironment()[pri:0, instance:com.example.ui.runner.TestRunner@6e06451e]" name="setupEnvironment" is-config="true" duration-ms="17" started-at="2020-05-28T13:05:32Z" finished-at="2020-05-28T13:05:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupEnvironment -->
+        <test-method status="PASS" signature="geturl()[pri:0, instance:com.example.ui.runner.TestRunner@6e06451e]" name="geturl" is-config="true" duration-ms="10510" started-at="2020-05-28T13:05:33Z" finished-at="2020-05-28T13:05:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- geturl -->
+        <test-method status="PASS" signature="setUpClass()[pri:0, instance:com.example.ui.runner.TestRunner@6e06451e]" name="setUpClass" is-config="true" duration-ms="929" started-at="2020-05-28T13:05:43Z" finished-at="2020-05-28T13:05:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUpClass -->
+        <test-method status="PASS" signature="scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.ui.runner.TestRunner@6e06451e]" name="scenario" duration-ms="878" started-at="2020-05-28T13:05:44Z" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2020-05-28T13:05:45Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["Verify login with correct credentials"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Verify all the scenarios related with login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- scenario -->
+        <test-method status="PASS" signature="cleanup(org.testng.ITestResult)[pri:0, instance:com.example.ui.runner.TestRunner@6e06451e]" name="cleanup" is-config="true" duration-ms="803" started-at="2020-05-28T13:05:45Z" finished-at="2020-05-28T13:05:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=scenario status=SUCCESS method=TestRunner.scenario(io.cucumber.testng.PickleWrapper, io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.example.ui.runner.TestRunner@6e06451e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- cleanup -->
+        <test-method status="PASS" signature="tearDownClass()[pri:0, instance:com.example.ui.runner.TestRunner@6e06451e]" name="tearDownClass" is-config="true" duration-ms="1059" started-at="2020-05-28T13:05:46Z" finished-at="2020-05-28T13:05:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDownClass -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.example.ui.runner.TestRunner@6e06451e]" name="tearDown" is-config="true" duration-ms="1002" started-at="2020-05-28T13:05:47Z" finished-at="2020-05-28T13:05:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- com.example.ui.runner.TestRunner -->
+    </test> <!-- /Users/shukrani.bille/eclipse-workspace/CucumberTest -->
+  </suite> <!-- All Test Suite -->
+</testng-results>

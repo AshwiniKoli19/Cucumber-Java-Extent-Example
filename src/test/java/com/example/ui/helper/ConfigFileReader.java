@@ -23,7 +23,7 @@ public class ConfigFileReader {
 	}
 
 	public String getPropertyValues(String keyName) {
-		return properties.getProperty(keyName).toLowerCase();
+		return properties.getProperty(keyName);
 	}
 
 }

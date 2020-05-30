@@ -1,9 +1,17 @@
 
 package com.example.ui.runner;
 
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.Test;
+import org.testng.annotations.BeforeClass;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.example.ui.helper.BaseWeb;
+
+import io.cucumber.core.gherkin.vintage.internal.gherkin.events.PickleEvent;
+import io.cucumber.java.After;
+import io.cucumber.java.Before;
 import io.cucumber.testng.CucumberOptions;
 import io.cucumber.testng.FeatureWrapper;
 import io.cucumber.testng.PickleWrapper;
@@ -12,7 +20,7 @@ import org.testng.ITestResult;
 import org.testng.annotations.*;
 
 @CucumberOptions(features = { "src/test/resources/features" }, glue = {
-		"com/example/ui/stepdefinitions" }, tags = "@LoginTest", plugin = {
+		"com/example/ui/stepdefinitions" }, tags = "@LoginDyp", plugin = {
 				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
 				"json:target/cucumber-report.json" })
 public class TestRunner {
@@ -37,12 +45,13 @@ public class TestRunner {
 	public void scenario(PickleWrapper pickle, FeatureWrapper cucumberFeature) throws Throwable {
 		cucumberRunner.runScenario(pickle.getPickle());
 	}
-
+	
 	@BeforeTest
 	public void geturl() {
 		BaseWeb.getDriver();
 	}
 
+	
 	@AfterTest
 	public void tearDown() {
 		BaseWeb.closeBrowser();

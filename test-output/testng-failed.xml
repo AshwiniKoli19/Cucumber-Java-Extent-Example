@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [All Test Suite]">
+  <test name="/Users/shukrani.bille/eclipse-workspace/CucumberTest(failed)">
+    <classes>
+      <class name="com.example.ui.runner.TestRunner">
+        <methods>
+          <include name="setupEnvironment"/>
+          <include name="scenario"/>
+          <include name="tearDownClass"/>
+          <include name="geturl"/>
+          <include name="setUpClass"/>
+        </methods>
+      </class> <!-- com.example.ui.runner.TestRunner -->
+    </classes>
+  </test> <!-- /Users/shukrani.bille/eclipse-workspace/CucumberTest(failed) -->
+</suite> <!-- Failed suite [All Test Suite] -->

@@ -1,11 +1,16 @@
 package com.example.ui.helper;
 
 import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.CapabilityType;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.ui.Wait;
 
 import java.io.File;
 import java.util.concurrent.TimeUnit;
@@ -14,7 +19,8 @@ public class BaseWeb {
     static WebDriver driver;
     static String browserName,websiteURL;
 
-    public static WebDriver getDriver() {
+    @SuppressWarnings("deprecation")
+	public static WebDriver getDriver() {
         if (driver == null) {
             ConfigFileReader configFileReader = new ConfigFileReader();
             browserName = configFileReader.getPropertyValues("browser");
@@ -23,14 +29,23 @@ public class BaseWeb {
                 driver = new FirefoxDriver();
             }
             if (browserName.contains("chrome") || browserName.contains("cr")) {
-                driver = new ChromeDriver();
+            			
+				 /*DesiredCapabilities handleSSLChrome = DesiredCapabilities.chrome();
+				   handleSSLChrome.setCapability(CapabilityType.ACCEPT_SSL_CERTS, true); driver
+				 * new ChromeDriver(handleSSLChrome);
+				 * handleSSLChrome.acceptInsecureCerts(); 
+				 */
+            	//driver.navigate ().to ("javascript:document.getElementById('overridelink').click()");
+               	driver = new ChromeDriver();
             }
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         }
         driver.get(websiteURL);
+                
+        //driver.navigate().to("javascript:document.getElementById('details-button').click()");
+        //driver.navigate().to("javascript:document.getElementById('proceed-link').click()");
         return driver;
-
     }
 
     public static void closeBrowser() {
@@ -78,4 +93,8 @@ public class BaseWeb {
         }
     }
 
+    public static WebElement FindWebElement(WebDriver driver, By by)
+    {
+    	return driver.findElement(by);
+    }
 }

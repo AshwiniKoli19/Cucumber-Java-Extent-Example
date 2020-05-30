@@ -41,4 +41,13 @@ public class HomePage {
         wait.waitForElement(driver,loginButton,5);
         Assert.assertTrue(driver.getCurrentUrl().contains("index"));
     }
+    
+    
+	public void verifyLoginStatus() {
+		// TODO Auto-generated method stub
+		Boolean flag = loginButton.isDisplayed();
+		System.out.println(flag);
+    	Assert.assertTrue(flag);;
+		
+	}
 }

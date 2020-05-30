@@ -4,7 +4,9 @@
     <test verbose="2" preserve-order="true" name="/Users/shukrani.bille/eclipse-workspace/CucumberTest">
         <classes>
             <class name="com.example.ui.runner.TestRunner">
-                <methods><include name="scenario"/></methods>
+                <methods>
+                <include name="scenario"/>
+                </methods>
             </class>
         </classes>
     </test>

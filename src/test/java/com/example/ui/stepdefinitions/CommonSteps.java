@@ -36,6 +36,7 @@ public class CommonSteps {
 
     @Then("^I am successfully logged in$")
     public void i_am_successfully_logged_in() throws Throwable {
+    	homePage.verifyLoginStatus();
 
     }
 
